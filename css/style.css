@@ -1163,7 +1163,7 @@ form{
     .header-logo a{
         font-size: 32px;
     }
-    
+
     .header-menu ul{
         display: none;
     }
@@ -1282,9 +1282,9 @@ form{
         font-size: 37px;
     }
 
-    .masthead-overlay {
+    /* .masthead-overlay {
         padding-top: 140px;
-    }
+    } */
 
     .masthead h3 {
         font-size: 20px;
@@ -1421,9 +1421,9 @@ form{
         display: none;
     }
 
-    .masthead-overlay {
+    /* .masthead-overlay {
         padding-top: 160px;
-    }
+    } */
 
     .masthead h3 {
         font-size: 18px;
