@@ -1163,6 +1163,10 @@ form{
     .header-logo a{
         font-size: 32px;
     }
+    
+    .header-menu ul{
+        display: none;
+    }
 
     .header-menu ul li{
         padding: 0px 10.5px;
@@ -1170,6 +1174,10 @@ form{
 
     .header-menu ul li a{
         font-size: 10.5px;
+    }
+
+    .masthead-overlay {
+        padding-top: 188px;
     }
 
     .masthead h3{
@@ -1274,8 +1282,8 @@ form{
         font-size: 37px;
     }
 
-    .header-menu ul{
-        display: none;
+    .masthead-overlay {
+        padding-top: 140px;
     }
 
     .masthead h3 {
