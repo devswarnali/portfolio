@@ -1413,6 +1413,10 @@ form{
         display: none;
     }
 
+    .masthead-overlay {
+        padding-top: 160px;
+    }
+
     .masthead h3 {
         font-size: 18px;
     }
