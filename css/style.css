@@ -258,7 +258,12 @@ p{
 .about-image{
     height: 572.69px;
     width: 500px;
-    border: 1px solid #ffffff;
+}
+
+.about-image img{
+    width: 420px;
+    height: 620px;
+    border: 10px solid #1c1c1c;
 }
 
 .content-box{
@@ -272,8 +277,7 @@ p{
 }
 
 .section-title{
-    background-image:url(../images/title-bg.png);
-    background-repeat: no-repeat;
+   text-align: center;
 }
 
 .section-title h2{
@@ -281,8 +285,25 @@ p{
     font-size: 36px;
     font-weight: 700;
     text-transform: capitalize;
-    padding: 0px 0px 5px 15px;
     margin-bottom: 32px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2 span{
+    position: relative;
+    z-index: 2;
+}
+
+.section-title h2::before{
+    content: "";
+    width: 102px;
+    height: 46px;
+    position: absolute;
+    top: 0px;
+    left: -13px;
+    background-image: url(../images/title-bg.png);
+    background-repeat: no-repeat;
 }
 
 .profile-details{
@@ -443,24 +464,80 @@ p{
 
 .project-coloumn{
     width: 33.33333%;
-    padding: 0px 15px;
+    padding: 15px 15px;
+    height: 300px;
 }
-
+/* 
 .project-row{
     margin-bottom: 40px;
+} */
+
+.project-box{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    transition: .4s ease-in-out;
 }
 
-.project-box img{
-    position: relative;
+.image-one-jpg{
+    background-image: url(../images/1.jpg);
+}
+
+.image-two-jpg{
+    background-image: url(../images/2.jpg);
+}
+
+.image-five-jpg{
+    background-image: url(../images/5.jpg);
 }
 
 .overley{
     background-color: #ffffffd9;
-    height: calc(100%-20px);
-    width: calc(100%-20px);
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    padding: 15px;
+    display: none;
+    transition:.4s ease-in-out;
+}
+
+.project-box:hover .overley{
+    display: block;
+}
+
+.overley h3{
+    text-align: center;
+    text-transform: capitalize;
+    color: #606060;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 45%;
+    transition: .4s ease-in-out;
+}
+
+.overley:hover h3{
+    margin-top: 41%;
+}
+
+.overley p{
+    text-align: center;
+    text-transform: capitalize;
+    color: #606060;
+    font-size: 14px;
+}
+
+.overley a{
+    text-decoration: none;
+    color: #606060;
+    transition: all .2s ease-in-out;
+}
+
+.overley a:hover{
+    color:#000;
 }
 
 .page-resume{
@@ -690,6 +767,7 @@ p{
 
 .blog-box{
     background-color: #000000;
+    height: 100%;
 }
 
 .thumbnail img{
@@ -767,19 +845,33 @@ p{
     color: #ffffff;
 }
 
-.right-coloumn{
+.right-column{
     width: 66.6667%;
+    padding: 0px 15px;
     height: 100%;
 }
 
 .blog-row-right{
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
+    min-height: 301px;
+}
+
+.right-thumbnail{
+    height: 100%;
 }
 
 .right-thumbnail img{
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-thumbnail a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .blog-content-right{
@@ -788,16 +880,18 @@ p{
 
 .blog-coloumn-left{
     width: 40%;
+    padding: 15px 0px;
     height:auto;
 }
 
 .blog-coloumn-right{
     width: 60%;
+    padding: 15px 0px;
 }
-
+/* 
 .blog-coloumn-margin{
     margin-bottom: 30px;
-}
+} */
 
 .start-work{
     width: 100%;
@@ -1025,4 +1119,382 @@ form{
     right: 40px;
     bottom: 24px;
     font-size: 28px;
+}
+
+@media (max-width:1199px){
+    .container{
+        max-width: 960px;
+    }
+
+    .header-logo a{
+        font-size: 37px;
+    }
+
+    .header-menu ul li{
+        padding: 0px 19.2px;
+    }
+
+    .masthead h2{
+        font-size: 67px;
+    }
+
+    .profile-description li {
+        font-size: 11.5px;
+    }
+
+    .resume-wrapper-left {
+        padding-right: 13px;
+    }
+
+    .right-margin {
+        margin-right: 53px;
+    }
+
+    .copyright p{
+        font-size: 17.5px;
+    }
+}
+
+@media (max-width:991px){
+    .container{
+        max-width: 720px;
+    }
+
+    .header-logo a{
+        font-size: 32px;
+    }
+
+    .header-menu ul li{
+        padding: 0px 10.5px;
+    }
+
+    .header-menu ul li a{
+        font-size: 10.5px;
+    }
+
+    .masthead h3{
+        font-size: 22px;
+    }
+
+    .masthead h2{
+        font-size: 57px;
+    }
+
+    .profile-description li {
+        font-size: 10.5px;
+    }
+
+    .about-image img {
+        width: 311px;
+        height: 508px;
+    }
+
+    .content-box {
+        margin-left: 82px;
+        margin-top: -80px;
+    }
+
+    .project-coloumn {
+        width: 50%;
+    }
+
+    .resume-wrapper-left {
+        padding-right: 13px;
+    }
+
+    .single-resume{
+        min-height: 280px;
+    }
+
+    .client-avatar img{
+        margin-left: -15px;
+    }
+
+    .client-about h5 {
+        margin-top: 30px;
+    }
+
+    .right-margin {
+        margin-right: 0px;
+    }
+
+    .clientpage-coloumn {
+        width: 33.3333%;
+    }
+
+    .clientpage-box {
+        padding: 25px;
+    }
+
+    .blog-box {
+        margin-right: -40px;
+    }
+
+    .blog-content {
+        padding: 25px 25px;
+    }
+
+    .blog-coloumn {
+        margin-left: -18px;
+        margin-right: 18px;
+    }
+
+    .contact-icon {
+        height: 52px;
+        width: 52px;
+    }
+
+    .contact-icon i {
+        font-size: 24px;
+    }
+
+    .contact-box h5 a {
+        font-size: 18px;
+    }
+
+    .con-input {
+        margin-bottom: 16px;
+    }
+
+    .right-coloumn textarea {
+        height: 166px;
+    }
+
+    .copyright p{
+        font-size: 16.5px;
+    }
+}
+
+@media (max-width:767px){
+    .container{
+        max-width: 540px;
+    }
+
+    .header-logo a{
+        font-size: 37px;
+    }
+
+    .header-menu ul{
+        display: none;
+    }
+
+    .masthead h3 {
+        font-size: 20px;
+    }
+
+    .masthead h2{
+        font-size: 62px;
+    }
+
+    .coloumn {
+        width: 100%;
+    }
+
+    .about-image {
+        height: auto;
+        width: auto;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 450px;
+        height: auto;
+    }
+
+    .content-box {
+        margin: 0px;
+    }
+
+    .about-content {
+        padding: 0px 15px;
+        padding-top: 0px;
+        margin-left: -17px;
+    }
+
+    .service-coloumn {
+        width: 50%;
+    }
+
+    .project-coloumn {
+        height: 280px;
+    }
+
+    .resume-coloumn {
+        width: 100%;
+    }
+
+    .client-box {
+        margin-bottom: 50px;
+    }
+
+    .client-avatar img {
+        margin-left: 30px;
+    }
+
+    .happyclients-coloumn {
+        width: 50%;
+    }
+
+    .happyclients {
+        margin-top: 50px;
+    }
+
+    .happyclies-box{
+        margin-bottom: 40px;
+    }
+
+    .blog-coloumn{
+        width: 100%;
+    }
+
+    .blog-box{
+        text-align: center;
+    }
+
+    .thumbnail img,
+    .right-thumbnail img{
+        width: 300px;
+    }
+
+    .right-column {
+        width: 100%;
+    }
+
+    .blog-row-right{
+        flex-direction: column;
+        background-color: #000;
+    }
+
+    .blog-coloumn-right,
+    .blog-coloumn-left{
+        width: 100%;
+    }
+
+    .blog-box {
+        margin-right: 0px;
+    }
+
+    .resume-wrapper-left {
+        padding-right: 13px;
+    }
+
+    .contact-wrapper {
+        padding: 35px;
+    }
+
+    .left-coloumn,
+    .right-coloumn{
+        width: 100%;
+    }
+
+    .right-coloumn textarea {
+        height: 125px;
+    }
+
+    .my-email{
+        word-break: break-all;
+    }
+
+    .copyright p{
+        font-size: 16.5px;
+    }
+}
+
+@media (max-width:575px){
+    .container{
+        max-width: 100%;
+    }
+
+    .header-logo a{
+        font-size: 34px;
+    }
+
+    .header-menu ul{
+        display: none;
+    }
+
+    .masthead h3 {
+        font-size: 18px;
+    }
+
+    .masthead h2{
+        font-size: 57px;
+    }
+
+    .about-image img {
+        width: 286px;
+    }
+
+    .btn{
+        padding: 12.5px 10.5px;
+        margin-right: 18px;
+    }
+
+    .project-coloumn {
+        width: 100%;
+    }
+
+    .happyclients-coloumn {
+        width: 100%;
+    }
+
+    .clientpage-coloumn {
+        width: 100%;
+    }
+
+    .blog-page{
+        padding: 70px 0px 50px;
+    }
+
+    .blog-content{
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+
+    .blog-coloumn{
+        margin-left: -7px;
+        margin-right: 0px;
+    }
+
+    .start-work{
+        padding: 60px 0px 75px;
+    }
+
+    .right-thumbnail img{
+        margin-left: -6px;
+    }
+
+    .right-coloumn textarea {
+        height: 85px;
+    }
+
+    .submit-btn {
+        padding: 0px 10px;
+        font-size: 11px;
+    }
+
+    .contact-coloumn {
+        width: 100%;
+    }
+
+    .contact-icon {
+        height: 46px;
+        width: 46px;
+    }
+
+    .contact-icon i {
+        font-size: 20px;
+    }
+
+    .contact {
+        padding-bottom: 60px;
+    }
+
+    .resume-wrapper-left {
+        padding-right: 13px;
+    }
+
+    .copyright p {
+        font-size: 15.5px;
+    }
 }
